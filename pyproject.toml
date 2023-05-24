@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "nemo-guardrails-test"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = []
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nemoguardrails = "^0.1.0"
+openai = "^0.27.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+pytest-rerunfailures = "^11.1.2"
+ruff = "^0.0.261"
+mypy = "^1.2.0"
+black = "^23.3.0"
+typing-extensions = "^4.5.0"
+pytest-xdist = "^3.2.1"
+poethepoet = "^0.19.0"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 140
+
+[tool.mypy]
+check_untyped_defs = "True"
+disallow_any_generics = "True"
+disallow_subclassing_any = "True"
+disallow_untyped_calls = "True"
+disallow_untyped_defs = "True"
+disallow_untyped_decorators = "True"
+disallow_incomplete_defs = "True"
+no_implicit_optional = "True"
+warn_redundant_casts = "True"
+warn_unused_ignores = "True"
+warn_unused_configs = "True"
+warn_return_any = "True"
+strict_optional = "True"
+strict_equality = "True"
+
+[tool.poe.tasks]
